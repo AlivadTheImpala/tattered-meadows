@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Womens boutique appareal built on sustainable fashion principles. All collections are handmade by recycling unwanted garments to create new and fashionable pieces."
+    />
+    <title>Tattered Meadows | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/148bf6fa70.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sizing.html">SIZING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">ABOUT</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+
+          <span class="bar"></span>
+
+          <span class="bar"></span>
+        </div>
+
+        <h1 class="title">
+          <a href="index.html">Tattered Meadows</a>
+        </h1>
+
+        <div class="cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="image">
+        <div class="desktop-img"></div>
+        <div class="mobile-img"></div>
+      </div>
+
+      <div class="content">
+        <div class="content-container">
+          <header>
+            <h1>handcrafted fashion, sustainably sourced</h1>
+          </header>
+          <h2>
+            From recycled clothing to unique fashion, we create one-of-a-kind
+            pieces you'll love.
+          </h2>
+
+          <a href="shop.html">Shop Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections">
+      <header>
+        <h1>Latest Collection</h1>
+      </header>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            class="product-img"
+            src="images/blouse1.jpg"
+            alt="white blouse with sunflowers embroidered onto the front"
+          />
+          <div class="card-desc">
+            <h4 class="product-name"><b>Sunflower Blouse</b></h4>
+            <p class="product-price">$25</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="product-img"
+            src="images/dress1.jpg"
+            alt="blue shoulderless dress"
+          />
+          <div class="card-desc">
+            <h4 class="product-name"><b>Blue Sun Dress</b></h4>
+            <p class="product-price">$30</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="product-img"
+            src="images/jacket1.jpg"
+            alt="worn denim jacket"
+          />
+          <div class="card-desc">
+            <h4 class="product-name"><b>Blue Denim Jacket</b></h4>
+            <p class="product-price">$50</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-container">
+      <div class="img-container">
+        <header>
+          <h1 class="blog-heading">
+            Halvah danish brownie icing chocolate bar
+          </h1>
+        </header>
+
+        <a class="blog-button" href="blog.html">Read Our Blog</a>
+      </div>
+
+      <img src="" alt="" class="blog-img" />
+    </section>
+
+    <footer>
+      <p>
+        <small>
+          &copy; 2022-<?=date("Y")?>
+          by <a href="contactme.php">Brandon Davila</a>, All Rights Reserved ~
+          <a id="html-checker" href="#">Check HTML</a> ~
+          <a id="css-checker" href="#">Check CSS</a>
+        </small>
+      </p>
+    </footer>
+
+    <script>
+      //https://tinyurl.com/dynamic-html-checker
+      document
+        .getElementById("html-checker")
+        .setAttribute(
+          "href",
+          "https://validator.w3.org/nu/?doc=" + location.href
+        );
+      document
+        .getElementById("css-checker")
+        .setAttribute(
+          "href",
+          "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+        );
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
